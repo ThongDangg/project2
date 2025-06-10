@@ -13,13 +13,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //thg build context này như là 1 vị trí của widget hiện tại trên cây widget và phải trả về 1 widget (vd MaterialApp)
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: "SFProText",
+      ), // Đây là cái chỗ để fontfam cho cả trang
       home: Scaffold(
         // cho dễ hiểu thì mấy cái màu cam ta sẽ gọi là arguments
         appBar: AppBar(
           backgroundColor: Colors.blue[900],
           centerTitle: true,
           foregroundColor: Colors.white, //này là text color nha
-          title: Text("Hello Flutter"),
+          title: Text(
+            "Hello Flutter",
+            style: TextStyle(
+              fontFamily: "SFProDisplay",
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
         body: Container(
           //padding: EdgeInsets.all(10), //khoảng cách nội dung trong khối
@@ -34,18 +44,22 @@ class MyApp extends StatelessWidget {
             children: [
               Text(
                 "Welcome to Hello Flutter App",
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontFamily: "Creepster",
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
 
               Column(
                 //ctrl + . de? goi cai widget nay thanh 1 widget column
                 children: [
-                  Image.asset("assets/images/flutter_icon.png", height: 100), // còn 1 cách nữa là image.network xong bỏ url hình vô là xong
+                  Image.asset(
+                    "assets/images/flutter_icon.png",
+                    height: 100,
+                  ), // còn 1 cách nữa là image.network xong bỏ url hình vô là xong
                   SizedBox(height: 20),
-                  Text(
-                    "Developed by Thong Danggg",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
+                  Text("Developed by Thong Dang"),
                 ],
               ),
               Container(
@@ -54,7 +68,7 @@ class MyApp extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.black,
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(25),
                 ),
 
                 child: Row(
