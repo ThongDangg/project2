@@ -40,10 +40,10 @@ class MyApp extends StatelessWidget {
               Column(
                 //ctrl + . de? goi cai widget nay thanh 1 widget column
                 children: [
-                  Image.asset("assets/images/flutter_icon.png"),
+                  Image.asset("assets/images/flutter_icon.png", height: 100), // còn 1 cách nữa là image.network xong bỏ url hình vô là xong
                   SizedBox(height: 20),
                   Text(
-                    "Developed by Thong Dang",
+                    "Developed by Thong Danggg",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -59,13 +59,13 @@ class MyApp extends StatelessWidget {
 
                 child: Row(
                   children: [
-                    Text("Du ma", style: TextStyle(color: Colors.white)),
+                    Image.asset("assets/images/weetie.jpg", height: 80),
                     SizedBox(width: 20),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Alex Bristol",
+                          "Jesse Pinkman",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                         ),
                         Text(
-                          "www.alexbristol.com",
+                          "www.heisenberg.com",
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
